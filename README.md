@@ -11,7 +11,7 @@ The aim of this project is to address the lack of empathy and specificity found 
 
 
 ## Running the conversational agent
-####Pre-requisite: Python 3.7 or newer (https://www.python.org/downloads/windows/)
+#### Pre-requisite: Python 3.7 or newer (https://www.python.org/downloads/windows/)
 The conversational agent can be run on a web browser using local host. 
 The following steps may be used to do so.
 
@@ -52,6 +52,8 @@ Training response generation model
 python seq2seq_model.py
 ```
 ## User Interface
+![alt text](https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-details-form.png)
+
 
 ## File Structure
 ```commandline
