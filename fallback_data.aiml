@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>I HAVE *</pattern>
+        <template>What makes you think you have <star/>?</template>
+    </category>
+    <category>
+        <pattern>I THINK I HAVE *</pattern>
+        <template>What makes you think you have <star/>?</template>
+    </category>
+    <category>
+        <pattern>I MISS MY *</pattern>
+        <template>I am sorry to know that you miss your <star/>? </template>
+    </category>
+    <category>
+        <pattern>I MISS *</pattern>
+        <template>I am sorry to know that you miss your <star/>? </template>
+    </category>
+    <category>
+        <pattern>HELP ME *</pattern>
+        <template><star/></template>
+    </category>
+    <category>
+        <pattern>I LIKE *</pattern>
+        <template>I am glad to know that you like <star/>.</template>
+    </category>
+    <category>
+        <pattern>I LIKE YOU</pattern>
+        <template>I am glad to know that you like me.</template>
+    </category>
+    <category>
+        <pattern>I FEEL STRESSED ABOUT MY *</pattern>
+        <template>Oh I see, what exactly makes you stressed about your <star/></template>
+    </category>
+    <category>
+        <pattern>I AM NERVOUS ABOUT MY *</pattern>
+        <template>I understand you're nervous about your <star/></template>
+    </category>
+    <category>
+        <pattern>MY * MAKES ME HAPPY</pattern>
+        <template>I am glad to know your <star/> makes you happy. Is there anything else?</template>
+    </category>
+</aiml>
+

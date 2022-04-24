@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatBot.css') }}">
+    <!--
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/chatBot.css" rel="stylesheet" type="text/css"/>-->
+
+    <head>
+        <title>Empath Bot</title>
+
+    </head>
+    <body>
+        <div class="chat-screen">
+            <div class="chat-header">
+                <div class="chat-header-title">
+                    Hello there👋! I'm Zoey, an AI empathetic bot. Let's talk!
+                </div>
+
+                <div class="chat-header-option hide">
+                    <span class="dropdown custom-dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink1" style="will-change: transform;">
+                            <a class="dropdown-item end-chat" href="javascript:void(0);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bc32ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-power"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg>
+                                End Chat
+                            </a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            <form method="POST" action="/get_details">
+                <div class="chat-form">
+                <div class="row">
+                    <div class="col-md-12 text-center mb-2">
+                        <p>Please enter your name and email to start the conversation.</p>
+                    </div>
+                </div>
+
+                <input type="text" name="userName" class="col-md-12 form-group form-control" id="userName" placeholder="First Name" >
+
+                <input type="text" name="userEmail" class="col-md-12 form-group form-control" id="userEmail" placeholder="Email" >
+
+                <button type="submit" class="col-md-12 btn btn-primary btn-rounded btn-block" id="start-button" >Start Chat</button>
+
+                </div>
+            </form>
+
+
+
+            <div class="chat-body hide">
+
+                <div class="chat-bubble you"> Start by saying hi... </div>
+                <div class="chat-bubble you"> Hey there! 😇 </div>
+                <div class="chat-start"><span id='date-time'></span></div>
+
+            </div>
+
+            <div class="chat-input hide">
+                <input type="text" placeholder="Type a message...">
+                <button class="input-action-icon send-button chat-send" id="send-button">
+                    <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+                </button>
+            </div>
+
+            <form method="POST" action="/user_feedback">
+                 <div class="chat-session-end hide">
+                <h5>This chat session has ended!</h5>
+                <p>Thank you for talking to me. How would you rate this experience?</p>
+                <div class="rate-me">
+                    <button class="rate-bubble great" name="great-button" value="great">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></span>
+                        Great
+                    </button>
+                    <button class="rate-bubble bad" name="bad-button" value="bad">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-down"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg></span>
+                        Bad
+                    </button>
+                </div>
+
+            </div>
+
+            </form>
+
+            
+        </div>
+
+            <script>
+                $SCRIPT_ROOT = {{ request.script_root|tojson }};
+            </script>
+            <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='popper.min.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='select2.min.js') }}"></script>
+            <!--<script type="text/javascript" src="js/app.js"></script>
+            
+            <script src="js/jquery-3.1.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/select2.min.js"></script>-->
+            <script>
+                $(document).ready(function(){
+                    $(".select2_el").select2({
+                    });
+                });
+            </script>
+            <!--
+            <script>
+                $(document).ready(function () {  
+
+                    $('.chat-form button').click(function () {
+                        $('.chat-form').addClass('hide');
+                        $('.chat-body').removeClass('hide');
+                        $('.chat-input').removeClass('hide');
+                        
+                    });
+                });
+            </script>-->
+            
+            <script>
+                var today = new Date();
+                var day = today.getDay();
+                var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+                var hour = today.getHours();
+                var minute = today.getMinutes();
+                var second = today.getSeconds();
+                var prepand = (hour >= 12)? " PM ":" AM ";
+                dt = daylist[day] + " " + hour + ":" + minute + ":" + second;
+                document.getElementById('date-time').innerHTML=dt;
+            </script>
+
+        
+    </body>
+</html>
