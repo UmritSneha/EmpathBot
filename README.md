@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```commandline
 python app.py
 ```
-4. Load the local host address into a web browser
+4. Copy the local host address into a web browser. This will load the start screen of the system.
 ```commandline
 http://127.0.0.1:5000/ 
 ```
@@ -53,11 +53,10 @@ python seq2seq_model.py
 ```
 ## User Interface
 
-  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-details-form.png" width="500"/>
-  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-1.png" width="500"/>
-  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-2.png" width="500"/>
-  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-feedback-screen.png" width="500"/>
-
+<img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-details-form.png" width="500"/>
+<img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-1.png" width="500"/>
+<img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-2.png" width="500"/>
+<img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-feedback-screen.png" width="500"/>
 
 
 ## File Structure
@@ -75,11 +74,11 @@ COMP3003_EmpathBot
 │
 ├── models
 │   ├── classification
-│   │   ├── emotion
-│   │   ├── intent
-│   │   └── tag
+│   │   ├── emotion ...
+│   │   ├── intent ...
+│   │   └── tag ...
 │   │
-│   └── response_generation
+│   └── response_generation ...
 │ 
 ├── glove.6B
 │   └── glove.6B.100d.txt
@@ -87,7 +86,6 @@ COMP3003_EmpathBot
 ├── static
 │   ├── app.js
 │   ├── chatBot.css
-│   ├── ...
 │   ├── ...
 │   
 ├── templates
