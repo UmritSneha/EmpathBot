@@ -52,7 +52,12 @@ Training response generation model
 python seq2seq_model.py
 ```
 ## User Interface
-![alt text](https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-details-form.png)
+
+  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-details-form.png" width="500"/>
+  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-1.png" width="500"/>
+  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-chat-screen-2.png" width="500"/>
+  <img src="https://github.com/UmritSneha/EmpathBot/blob/main/ui-screenshots/user-feedback-screen.png" width="500"/>
+
 
 
 ## File Structure
@@ -113,5 +118,3 @@ Small Talk: https://www.kaggle.com/datasets/elvinagammed/chatbots-intent-recogni
 
 ## Pre-trained Glove Embedding
 https://nlp.stanford.edu/data/glove.6B.zip
-# EmpathBot
-# EmpathBot
